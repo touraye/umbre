@@ -6,6 +6,7 @@ import {
   TabsTrigger,
 } from './ui/tabs'; 
 import { CheckCircle2 } from 'lucide-react';
+import Heading from './Heading';
 
 // --- DATA for the tabs ---
 const tabsData = [
@@ -50,13 +51,8 @@ const tabsData = [
 const Solutions = () => {
   return (
     <section className="bg-white py-16 sm:py-24">
-      <div className="container mx-auto px-4">        
-        <div className="text-start">
-          <h2 className="text-[26px] md:text-[36px] text-gray-800">
-            Stream On Devices, Migrate Securely And 
-            <span className="font-bold text-gray-900"> Integrate With Your Favorite Tools</span>
-          </h2>
-        </div>
+      <div className="contain">               
+        <Heading top="Stream On Devices, Migrate Securely And " button='Integrate With Your Favorite Tools' />
         
         <div className="mt-12">
           <Tabs defaultValue={tabsData[0].value} className="w-full">            

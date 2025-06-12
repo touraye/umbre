@@ -18,7 +18,7 @@ interface CustomTabsProps {
 const CustomTabs: React.FC<CustomTabsProps> = ({ tabsData }) => {
   return (
     <Tabs defaultValue={tabsData[0].value} className="w-full">
-      <TabsList className="flex flex-wrap justify-center items-center gap-2 bg-white border-b border-gray-200 mb-24 sm:mb-12">
+      <TabsList className="flex flex-wrap justify-center gap-2 bg-white border-b border-gray-200 mb-24 sm:mb-12">
         {tabsData.map((tab) => (
           <TabsTrigger
             key={tab.value}

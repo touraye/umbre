@@ -26,19 +26,19 @@ const HeroSec = () => {
 				<div className='absolute inset-0 bg-brand-teal opacity-90'></div>
 			</div>
 
-			<div className='relative z-10 container mx-auto px-4 py-8 sm:py-32 text-center'>
-				<h1 className='text-[28px] md:text-[38px] lg:text-6xl font-extrabold leading-tight'>
-					Hire The World's Top OTT Developers
+			<div className='relative z-10 container mx-auto px-4 py-12 text-center'>
+				<h1 className='text-[22px] md:text-[30px] lg:text-[55px] font-bold leading-tight mb-10'>
+					Hire The World's Top OTT <br /> Developers
 					<br />
 					To Build Smarter & Launch Faster
 				</h1>
 
-				<p className='hidden md:block mt-6 max-w-2xl mx-auto text-lg text-gray-200'>
+				<p className='hidden md:block mb-10 text-[19px] md:text-[24px] text-gray-200'>
 					Create, nurture, and grow your streaming service with CONTUS Tech OTT
 					app development.
 				</p>
 
-				<ul className='mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 max-w-md mx-auto'>
+				<ul className='mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4 max-w-2xl mx-auto text-[24px] mb-10'>
 					{features.map((feature) => (
 						<li
 							key={feature}
@@ -49,13 +49,13 @@ const HeroSec = () => {
 					))}
 				</ul>
 
-				<div className='mt-10'>
+				<div className='mb-10'>
 					<Button
 						asChild
-						className='bg-orange-500 hover:bg-orange-600 text-white font-bold h-14 py-2 px-[28px] min-w-[200px] text-lg rounded-lg'>
+						className='bg-orange-500 hover:bg-orange-600 text-white text-[36px] font-bold  rounded-lg  inline-flex gap-4 justify-center transition-colors duration-300 py-8 '>
 						<Link href='/contact'>
 							Let's Talk
-							<ArrowRight className='ml-2 h-5 w-5' />
+							<ArrowRight className='ml-4 w-[32px] h-16 ' />
 						</Link>
 					</Button>
 				</div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Heading from './Heading';
 // --- Custom SVG Icon Components ---
 const IconStream: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -61,15 +62,11 @@ const featuresData = [
 const PlatformFeatures = () => {
   return (
     <section className="bg-white py-16 sm:py-24">
-      <div className="container mx-auto px-4">
-        <div className="mb-12">
-            <h2 className="text-[26px] md:text-[36px] text-gray-800">
-            Build An OTT Platform With All
-            <span className="font-bold text-gray-900"> The Features You Will Ever Need</span>
-            </h2>              
-        </div>
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">                    
-          <div className="lg:w-1/2">          
+      <div className="contain">        
+        <Heading top="Build An OTT Platform With All" button='The Features You Will Ever Need' />
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">  
+          
+          <div className="lg:w-1/2 mt-8">          
                      
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {featuresData.map((feature, index) => (

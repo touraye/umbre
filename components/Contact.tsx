@@ -80,7 +80,7 @@ const socialLinks = [
 const Contact = () => {
   return (
     <section className="bg-[#01403D] text-white py-16 sm:py-24">
-      <div className="container mx-auto px-4">        
+      <div className="contain">        
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-8">
                     
           <div className="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">

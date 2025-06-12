@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../components/ui/button';
+import Heading from './Heading';
 
 // --- DATA ---
 // A simple array for the key points
@@ -23,12 +24,8 @@ const CtaSection = () => {
         />       
         <div className="absolute inset-0 bg-linear-to-t to-green-900/50" />
       </div>
-      <div className="relative z-10 container mx-auto px-4 py-20 sm:py-28 flex flex-col items-center text-center">                
-        <h2 className="text-[30px] leading-[1.5] font-bold">
-          Hire Our Experienced & Skilled Developers To
-          <br />
-          <span className="text-[#f9df91]">Customize Your OTT Platform</span> 
-        </h2>        
+      <div className="relative z-10 contain py-20 sm:py-28 flex flex-col items-center text-center">                            
+        <Heading top="Hire Our Experienced & Skilled Developers To" button='Customize Your OTT Platform' color='#f9df91' align='center' mdAlign='center' />
         <ul className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-0 md:gap-6">
           {keyPoints.map((point, index) => (
             <li key={point} className="flex items-center justify-center gap-2">            

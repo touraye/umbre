@@ -1,3 +1,5 @@
+import Heading from "./Heading";
+
 const IconAward: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
       <circle cx="12" cy="8" r="6" />
@@ -79,12 +81,8 @@ const IconAward: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   const WhyChooseUs = () => {
     return (
       <section className="bg-why-choose-us-gradient text-white py-16 sm:py-24">
-        <div className="container mx-auto px-4">          
-          <div className="text-start">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight">
-              Why Choose CONTUS Tech For <span className="font-bold">OTT Platform Development?</span>
-            </h2>
-          </div>
+        <div className="contain">                   
+          <Heading top="Why Choose CONTUS Tech For" button='OTT Platform Development?' />
             
           <div className="mt-16 grid items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
             {featuresData.map((feature, index) => (

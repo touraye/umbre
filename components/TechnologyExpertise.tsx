@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import Heading from './Heading';
 
 // --- Data for the technology logos ---
 const techLogos = [
@@ -19,15 +20,9 @@ const techLogos = [
 const TechnologyExpertise = () => {
   return (
     <section className="bg-white py-16 sm:py-24">
-      <div className="container mx-auto px-4">        
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-xl md:text-2xl text-gray-600">
-            OTT App Developers Expertized
-          </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mt-1">
-            Across Frameworks & Technologies
-          </h3>
-        </div>
+      <div className="contain">        
+      
+        <Heading top='OTT App Developers Expertized' button='Across Frameworks & Technologies' />
         
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
           {techLogos.map((logo, index) => (
