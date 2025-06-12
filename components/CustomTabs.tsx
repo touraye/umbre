@@ -1,0 +1,96 @@
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import Image from "next/image";
+import { CheckCircle2 } from "lucide-react";
+
+export interface TabData {
+  value: string;
+  triggerText: string;
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  features: string[];
+}
+
+interface CustomTabsProps {
+  tabsData: TabData[];
+}
+
+const CustomTabs: React.FC<CustomTabsProps> = ({ tabsData }) => {
+  return (
+    <Tabs defaultValue={tabsData[0].value} className="w-full">
+      <TabsList className="flex flex-wrap justify-center items-center gap-2 bg-white border-b border-gray-200 mb-24 sm:mb-12">
+        {tabsData.map((tab) => (
+          <TabsTrigger
+            key={tab.value}
+            value={tab.value}
+            className="h-full text-base data-[state=active]:bg-[#01403D] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-brand-teal cursor-pointer"
+          >
+            {tab.triggerText}
+          </TabsTrigger>
+        ))}
+      </TabsList>
+
+      {tabsData.map((tab) => (
+        <TabsContent
+          key={tab.value}
+          value={tab.value}
+          className="pt-12"
+        >
+          <div className="flex flex-col-reverse md:flex-row items-center gap-12">
+            <div className="md:w-1/2">
+              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
+                {tab.title}
+              </h3>
+              <ul className="mt-6 space-y-4">
+                {tab.features.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-gray-600">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="md:w-1/2">
+              <Image
+                src={tab.imageSrc}
+                alt={tab.imageAlt}
+                width={600}
+                height={400}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </TabsContent>
+      ))}
+    </Tabs>
+  );
+}
+export default CustomTabs;
+// Usage example    
+// const tabsData: TabData[] = [
+//   {
+//     value: "tab1",
+//     triggerText: "Tab 1",
+//     imageSrc: "/images/tab1.jpg",
+//     imageAlt: "Tab 1 Image",
+//     title: "Tab 1 Title",
+//     features: ["Feature 1", "Feature 2", "Feature 3"],
+//   },
+//   {
+//     value: "tab2",
+//     triggerText: "Tab 2",
+//     imageSrc: "/images/tab2.jpg",
+//     imageAlt: "Tab 2 Image",
+//     title: "Tab 2 Title",
+//     features: ["Feature 1", "Feature 2", "Feature 3"],
+//   },
+//   {
+//     value: "tab3",
+//     triggerText: "Tab 3",
+//     imageSrc: "/images/tab3.jpg",
+//     imageAlt: "Tab 3 Image",
+//     title: "Tab 3 Title",
+//     features: ["Feature 1", "Feature 2", "Feature 3"],
+//   },
+// ];
