@@ -78,7 +78,7 @@ const FooterLinkColumn = ({
 
 const Footer = () => {
 	return (
-		<footer className='bg-[#01403D] text-gray-300'>
+		<footer className='bg-[#01403D] text-gray-300 pb-55 md:pb-0'>
 			<div className='container mx-auto '>				
 				<section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 py-12 px-6'>
 					<div className='sm:col-span-2 lg:col-span-2 pr-8'>
