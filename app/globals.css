@@ -146,3 +146,58 @@
 .p-large {
   @apply md:text-[21px];
 }
+
+
+/* ANIMATION EFFECT */
+.animate-pulse-horizontal {
+  animation: pulse-horizontal 2s ease-in-out infinite;
+}
+
+@keyframes pulse-horizontal {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.05);
+  }
+}
+@keyframes pulse-vertical {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.05);
+  }
+}
+@keyframes pulse-horizontal-2 {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.1);
+  }
+}
+@keyframes pulse-vertical-2 {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.1);
+  }
+}
+@keyframes pulse-horizontal-3 {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.15);
+  }
+}
+@keyframes pulse-vertical-3 {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.15);
+  }
+}

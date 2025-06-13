@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import F from "@/components/F";
+import FloatingCtaButton from "@/components/FloatingCtaButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,8 @@ export default function RootLayout({
           {children}
         </main>
         <F />
+
+        <FloatingCtaButton />
       </body>
     </html>
   );
