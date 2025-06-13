@@ -137,3 +137,12 @@
 .heading-1-extra {
   @apply font-bold;
 }
+
+/* Paragraphs */
+.p-medium {
+  @apply text-[19px];
+}
+
+.p-large {
+  @apply md:text-[21px];
+}
