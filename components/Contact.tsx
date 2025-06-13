@@ -83,33 +83,33 @@ const Contact = () => {
       <div className="contain">        
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-8">
                     
-          <div className="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <p className="font-semibold text-green-300">#WeAreHereForYou</p>
-            <h2 className="mt-2 text-4xl lg:text-5xl font-bold leading-tight">
+          <div className="lg:w-1/2 flex flex-col items-start">
+            <p className="font-semibold text-[#15ff7e] text-[20px]">#WeAreHereForYou</p>
+            <h2 className="mt-2 text-[44px] md:text-[54px] font-bold leading-tight">
               What can we develop together?
             </h2>
-            <Button asChild size="lg" className="mt-8 bg-orange-500 hover:bg-orange-600 text-white font-bold h-14 px-8 text-lg rounded-lg">
+            <Button asChild size="lg" className="mt-8 bg-orange-500 hover:bg-orange-600 text-white font-bold h-14 px-8 text-[24px] rounded-lg">
               <Link href="/contact">
-                Let's Talk <ArrowRight className="ml-2 h-5 w-5" />
+                Let's Talk <ArrowRight className="ml-2 h-10 w-15" />
               </Link>
             </Button>
           </div>
           
           <div className="lg:w-1/2 flex flex-col gap-10">            
             <div>
-              <h3 className="font-bold">We are located in India and USA</h3>
+              <h3 className="font-bold text-[20px] md:text-[22px]">We are located in India and USA</h3>
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {locationsData.map((location, index) => (
                   <div key={index} className="flex gap-4">
                     <location.icon className="h-8 w-12 flex-shrink-0 rounded" />
-                    <p className="text-sm text-gray-300">{location.address}</p>
+                    <p className="text-[14px] text-gray-300">{location.address}</p>
                   </div>
                 ))}
               </div>
             </div>
                     
             <div className="hidden lg:block">
-              <h3 className="font-bold">Follow Us On.</h3>
+              <h3 className="font-bold text-[20px] md:text-[22px]">Follow Us On.</h3>
               <div className="mt-4 flex items-center gap-4">
                 {socialLinks.map((link, index) => (
                   <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full text-black hover:opacity-80 transition-opacity">

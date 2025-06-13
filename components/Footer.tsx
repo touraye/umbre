@@ -17,7 +17,7 @@ const footerSections = [
 		],
 	},
 	{
-		title: 'Services1', // As per the image, the title is repeated
+		title: 'Services1',
 		links: [
 			{ name: 'Offshore Development', href: '#' },
 			{ name: 'Software Outsourcing', href: '#' },
@@ -59,7 +59,7 @@ const FooterLinkColumn = ({
 	links: { name: string; href: string }[]
 }) => (
 	<div>
-		<h3 className='font-bold text-white uppercase tracking-wider mb-4'>
+		<h3 className='font-bold text-white text-[23px] uppercase tracking-wider mb-4'>
 			{title}
 		</h3>
 		<ul className='space-y-3'>
@@ -79,21 +79,20 @@ const FooterLinkColumn = ({
 const Footer = () => {
 	return (
 		<footer className='bg-[#01403D] text-gray-300'>
-			<div className='container mx-auto '>
-				{/* top footer */}
+			<div className='container mx-auto '>				
 				<section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 py-12 px-6'>
 					<div className='sm:col-span-2 lg:col-span-2 pr-8'>
-						<h3 className='font-bold text-white uppercase tracking-wider mb-4'>
+						<h3 className='font-bold text-white text-[26px] uppercase tracking-wider mb-4'>
 							About Contus Tech
 						</h3>
-						<p className='text-sm leading-relaxed'>
+						<p className='text-[16px] leading-relaxed'>
 							CONTUS Tech is a turnkey partner for product development, design,
 							and strategy. As a full-stack software product design &
 							development company, We engineer high-performance tech products
 							developed for rapid market launch.
 						</p>
 						<div className='mt-8'>
-							<h4 className='font-bold text-white text-lg'>
+							<h4 className='font-bold text-[34px] text-white'>
 								Want To Build Next-Gen Digital Solutions?
 							</h4>
 							<p className='mt-1'>
@@ -101,13 +100,13 @@ const Footer = () => {
 							</p>
 							<Button
 								asChild
-								className='mt-4 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6'>
-								<Link href='/contact-sales'>Contact Sales</Link>
+								size="xl"
+								className='mt-4 bg-orange-500 hover:bg-orange-600 text-white rounded-lg'>
+								<Link href='/contact-sales' className=''>Contact Sales</Link>
 							</Button>
 						</div>
                     </div>
-                    
-                    {/* Footer Links */}
+                                        
                     {footerSections.map((section) => (
                         <FooterLinkColumn
                             key={section.title}
@@ -116,8 +115,7 @@ const Footer = () => {
                         />
                     ))}
 				</section>
-
-				{/* button footer */}
+				
 				<section className='bg-[#003b38] mt-16 py-4 px-8 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center'>
 					<p className='text-sm text-gray-400 text-center sm:text-left mb-4 sm:mb-0'>
 						© Copyrights {new Date().getFullYear()} by CONTUS TECH.

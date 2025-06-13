@@ -75,7 +75,7 @@ const PlatformFeatures = () => {
                     <feature.icon className="h-12 w-12" />
                   </div>
                   <h4 className="mt-4 font-bold text-[21px] md:text-[28px] text-gray-900">{feature.title}</h4>
-                  <p className="mt-2 text-[19px] md:text-[24px] leading-[1.5] text-gray-800">{feature.description}</p>
+                  <p className="mt-2 p-medium p-large leading-[1.5] text-gray-800">{feature.description}</p>
                 </div>
               ))}
             </div>

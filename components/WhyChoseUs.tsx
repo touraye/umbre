@@ -92,8 +92,8 @@ const IconAward: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
                     <feature.icon className="h-10 w-10 text-green-400" />
                   </div>
                 </div>
-                <h4 className="mt-5 font-bold text-xl">{feature.title}</h4>
-                <p className="mt-2 text-gray-300 max-w-xs mx-auto">
+                <h4 className="mt-5 font-bold text-xl md:text-[26px]">{feature.title}</h4>
+                <p className="mt-2 t-medium p-large text-gray-300 max-w-xs mx-auto">
                   {feature.description}
                 </p>
               </div>

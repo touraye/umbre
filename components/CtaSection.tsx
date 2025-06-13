@@ -29,8 +29,8 @@ const CtaSection = () => {
         <ul className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-0 md:gap-6">
           {keyPoints.map((point, index) => (
             <li key={point} className="flex items-center justify-center gap-2">            
-             <span className="inline-block text-gray-400 text-[40px]">•</span>
-              <span className='inline-block text-[21px]'>{point}</span>
+             <span className="inline-block text-gray-400 text-[50px]">•</span>
+              <span className='inline-block text-[24px]'>{point}</span>
             </li>
           ))}
         </ul>     

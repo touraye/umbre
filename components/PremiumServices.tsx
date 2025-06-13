@@ -120,7 +120,7 @@ const PremiumServices = () => {
                   <br />
                   {service.subtitle}
                 </h4>
-                <p className="mt-2 text-gray-600 text-sm leading-relaxed">
+                <p className="mt-2 text-gray-600 p-medium p-large leading-relaxed">
                   {service.description}
                 </p>
               </CardContent>

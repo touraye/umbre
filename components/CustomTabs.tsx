@@ -2,13 +2,17 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 
+export type Feature = {
+  title: string;
+  description: string;
+};
 export interface TabData {
   value: string;
   triggerText: string;
   imageSrc: string;
   imageAlt: string;
   title: string;
-  features: string[];
+  features: Feature[];
 }
 
 interface CustomTabsProps {
@@ -18,12 +22,12 @@ interface CustomTabsProps {
 const CustomTabs: React.FC<CustomTabsProps> = ({ tabsData }) => {
   return (
     <Tabs defaultValue={tabsData[0].value} className="w-full">
-      <TabsList className="flex flex-wrap justify-center gap-2 bg-white border-b border-gray-200 mb-24 sm:mb-12">
+      <TabsList className="w-full flex flex-wrap items-center justify-center gap-4 px-3 md:px-6 mb-45 md:mb-24">
         {tabsData.map((tab) => (
           <TabsTrigger
             key={tab.value}
             value={tab.value}
-            className="h-full text-base data-[state=active]:bg-[#01403D] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-brand-teal cursor-pointer"
+            className="text-base border-gray-700 data-[state=active]:bg-[#01403D] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-brand-teal cursor-pointer hover:bg-gray-300 hover:text-black transition-colors duration-200 text-[14px] p-large h-12 flex items-center justify-center"
           >
             {tab.triggerText}
           </TabsTrigger>
@@ -38,14 +42,17 @@ const CustomTabs: React.FC<CustomTabsProps> = ({ tabsData }) => {
         >
           <div className="flex flex-col-reverse md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
+              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-12">
                 {tab.title}
               </h3>
               <ul className="mt-6 space-y-4">
                 {tab.features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle2 className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
-                    <span className="text-gray-600">{feature}</span>
+                    <div>
+                      <h5 className="font-semibold p-medium p-large text-gray-900">{feature.title}</h5>
+                      <span className="p-medium p-large text-gray-600">{feature.description}</span>
+                    </div>
                   </li>
                 ))}
               </ul>

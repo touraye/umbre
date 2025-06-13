@@ -56,9 +56,9 @@ const Solutions = () => {
         
         <div className="mt-12">
           <Tabs defaultValue={tabsData[0].value} className="w-full">            
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 h-12">
+            <TabsList className="grid w-full gap-2 max-w-md mx-auto grid-cols-3 h-12">
               {tabsData.map((tab) => (
-                <TabsTrigger key={tab.value} value={tab.value} className="h-full text-base data-[state=active]:bg-[#01403D] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-brand-teal cursor-pointer">
+                <TabsTrigger key={tab.value} value={tab.value} className="text-base border-gray-700 data-[state=active]:bg-[#01403D] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-brand-teal cursor-pointer hover:bg-gray-300 hover:text-black transition-colors duration-200 h-12 flex items-center justify-center text-[14px] p-large">
                   {tab.triggerText}
                 </TabsTrigger>
               ))}
@@ -75,7 +75,7 @@ const Solutions = () => {
                       {tab.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <CheckCircle2 className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
-                          <span className="text-gray-600">{feature}</span>
+                          <span className="text-gray-600 p-medium p-large">{feature}</span>
                         </li>
                       ))}
                     </ul>
