@@ -44,7 +44,7 @@ const FloatingCtaButton = () => {
       <Button
         asChild
         size="lg"
-        className="bg-orange-500 text-[22px] w-full hover:bg-orange-600 text-white font-bold h-14 px-8 rounded-lg shadow-lg inline-flex items-center gap-4 justify-center transition-colors duration-300"
+        className="bg-orange-500 text-[19px] w-full hover:bg-orange-600 text-white font-bold h-14 px-8 rounded-lg shadow-lg inline-flex items-center gap-4 justify-center transition-colors duration-300"
       >
         <Link href="/get-quote" className='group'>
           Get a Free Quote

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
+import IconInstagram from './Icons/IconInstagram';
 
 // --- Custom SVG Icon Components ---
 // Flags
@@ -42,11 +43,13 @@ const IconUsaFlag: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 // Social Media Icons
 const IconFacebook: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg {...props} fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+  <svg {...props} fill="rgb(47, 108, 239)" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
 );
-const IconInstagram: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg {...props} fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.7 2 8.33 2.02 7.85 2.05c-1.89.12-3.23 1.45-3.35 3.34C4.48 5.86 4.5 6.22 4.5 7.5s-.02 1.64-.05 2.12c-.12 1.89-1.45 3.23-3.34 3.35-.48.03-.84.05-2.12.05s-1.64-.02-2.12-.05c-1.89-.12-3.23-1.45-3.35-3.34C2.02 9.14 2 8.78 2 7.5s.02-1.64.05-2.12c.12-1.89 1.45-3.23 3.34-3.35C5.86 4.48 6.22 4.5 7.5 4.5c3.3 0 3.67-.02 4.15-.05c1.89-.12 3.23-1.45 3.35-3.34C15.14 2.02 15.78 2 16.5 2h-4.5M12 4c-3.1 0-3.47.01-3.9.05-1.55.1-2.59 1.15-2.69 2.7C5.36 7.22 5.35 7.59 5.35 8.9c0 1.31.01 1.68.05 2.15.1 1.55 1.15 2.59 2.7 2.69.47.04.83.05 2.15.05s1.68-.01 2.15-.05c1.55-.1 2.59-1.15 2.69-2.7.04-.47.05-.83.05-2.15s-.01-1.68-.05-2.15c-.1-1.55-1.15-2.59-2.7-2.69-.47-.04-.83-.05-2.15-.05M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm6.5-7.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
-);
+// const IconInstagram: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+//   <svg {...props} fill='red' viewBox='0 0 24 24'>
+//     <path d='M12 2C8.7 2 8.33 2.02 7.85 2.05c-1.89.12-3.23 1.45-3.35 3.34C4.48 5.86 4.5 6.22 4.5 7.5s-.02 1.64-.05 2.12c-.12 1.89-1.45 3.23-3.34 3.35-.48.03-.84.05-2.12.05s-1.64-.02-2.12-.05c-1.89-.12-3.23-1.45-3.35-3.34C2.02 9.14 2 8.78 2 7.5s.02-1.64.05-2.12c.12-1.89 1.45-3.23 3.34-3.35C5.86 4.48 6.22 4.5 7.5 4.5c3.3 0 3.67-.02 4.15-.05c1.89-.12 3.23-1.45 3.35-3.34C15.14 2.02 15.78 2 16.5 2h-4.5M12 4c-3.1 0-3.47.01-3.9.05-1.55.1-2.59 1.15-2.69 2.7C5.36 7.22 5.35 7.59 5.35 8.9c0 1.31.01 1.68.05 2.15.1 1.55 1.15 2.59 2.7 2.69.47.04.83.05 2.15.05s1.68-.01 2.15-.05c1.55-.1 2.59-1.15 2.69-2.7.04-.47.05-.83.05-2.15s-.01-1.68-.05-2.15c-.1-1.55-1.15-2.59-2.7-2.69-.47-.04-.83-.05-2.15-.05M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm6.5-7.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z' />
+//   </svg>
+// )
 const IconX: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg {...props} fill="currentColor" viewBox="0 0 24 24"><path d="M18.9 1.15a1.53 1.53 0 0 1 2.6 1.35L20.15 6.4c-1.86 6.08-6.93 10.8-13.35 11.23a1.53 1.53 0 0 1-1.5-1.8c.28-1.5 1.1-3.34 2.2-4.14C6.54 11.1 5.4 9.1 4.3 7.8c-1.1-1.3-2.2-2.6-2.2-4.13A1.53 1.53 0 0 1 3.5.2c6.08 1.86 10.8 6.93 11.23 13.35l3.8-1.4a1.53 1.53 0 0 1 1.8-1.5c1.5-.28 3.34-1.1 4.14-2.2.6-.8 1.1-2.1 1.3-3.6z"/></svg>
 );
@@ -111,11 +114,14 @@ const Contact = () => {
             <div className="hidden lg:block">
               <h3 className="font-bold text-[20px] md:text-[22px]">Follow Us On.</h3>
               <div className="mt-4 flex items-center gap-4">
-                {socialLinks.map((link, index) => (
-                  <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full text-black hover:opacity-80 transition-opacity">
-                    <link.icon className="h-5 w-5" />
-                  </a>
-                ))}
+                {socialLinks.map((link, index) => {
+                  const Icon = link.icon;
+                  return (
+                    <a key={index} href={link.href} target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-full text-black hover:opacity-80 transition-opacity">
+                      <Icon className="h-5 w-5" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>

@@ -37,8 +37,8 @@ const Header = () => {
     return (
       <>
     <header className="bg-white sticky top-0 z-50 shadow-sm">
-        <div className="container mx-auto px-12">
-          <div className="flex justify-between items-center h-20">
+        <div className="container mx-auto">
+          <div className="flex justify-between items-center h-15 px-4">
             
             {/* Logo */}
             <Link href="/" className="flex-shrink-0" onClick={() => setIsMenuOpen(false)}>
@@ -47,11 +47,11 @@ const Header = () => {
                 alt="Codes Clutch Logo" 
                 width={140} 
                 height={70} 
-                className="h-10 w-auto" />
+                className="h-8 md:h-10 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link key={link.name} href={link.href} className="flex items-center text-gray-700 hover:text-blue-600 transition-colors font-medium">
                   {link.name}
@@ -64,7 +64,7 @@ const Header = () => {
             </nav>
 
             {/* --- Mobile Controls --- */}
-            <div className="md:hidden flex items-center space-x-3">
+            <div className="lg:hidden flex items-center space-x-3">
               {/* Mobile "Let's Talk" Button - always visible on mobile */}
               <Link href="/contact" className="bg-orange-500 text-white font-semibold px-4 py-2 text-sm rounded-md hover:bg-orange-600 transition-colors">
                 Let's Talk
@@ -84,7 +84,7 @@ const Header = () => {
       </header>
       
       <div
-        className={`md:hidden fixed top-20 left-0 w-full h-[calc(100vh-80px)] bg-white z-40 transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed top-15 left-0 w-full h-[calc(100vh-90px)] bg-white z-40 transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'
         }`}
       >

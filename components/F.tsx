@@ -10,11 +10,12 @@ import {
 	AccordionTrigger,
 } from '../components/ui/accordion'
 import { ChevronDown, ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
 // --- Custom SVG Icon Components ---
 const IconFacebook: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-	<svg {...props} fill='currentColor' viewBox='0 0 24 24'>
-		<path d='M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z' />
+	<svg {...props} fill='rgb(47, 108, 239)' viewBox='0 0 24 24'>
+		<path d='M 33.093 27.738 H 29.221 c -0.626 0 -0.821 -0.235 -0.821 -0.821 V 22.185 c 0 -0.626 0.235 -0.821 0.821 -0.821 h 3.872 V 17.922 A 8.687 8.687 0 0 1 34.149 13.5 a 6.489 6.489 0 0 1 3.481 -2.894 a 8.7 8.7 0 0 1 3.011 -0.508 h 3.833 c 0.548 0 0.782 0.235 0.782 0.782 v 4.458 c 0 0.548 -0.235 0.782 -0.782 0.782 c -1.056 0 -2.112 0 -3.168 0.039 a 1.412 1.412 0 0 0 -1.6 1.6 c -0.039 1.173 0 2.307 0 3.52 h 4.537 c 0.626 0 0.86 0.235 0.86 0.86 v 4.732 c 0 0.626 -0.2 0.821 -0.86 0.821 H 39.7 V 40.448 c 0 0.665 -0.2 0.9 -0.9 0.9 H 33.914 c -0.587 0 -0.821 -0.235 -0.821 -0.821 Z' />
 	</svg>
 )
 
@@ -102,27 +103,30 @@ const FooterLogo = () => (
 )
 
 const AboutAndCta = () => (
-	<div className='lg:col-span-2'>
-		<h3 className='font-bold text-white uppercase tracking-wider mb-4'>
-			About Contus Tech
-		</h3>
-		<p className='text-sm leading-relaxed'>
-			CONTUS Tech is a turnkey partner for product development, design, and
-			strategy. As a full-stack software product design & development company,
-			We engineer high-performance tech products developed for rapid market
-			launch.
-		</p>
-		<div className='mt-8'>
-			<h4 className='font-bold text-white text-lg'>
-				Want To Build Next-Gen Digital Solutions?
-			</h4>
-			<p className='mt-1'>Let's create something extraordinary together!</p>
-			<Button
-				asChild
-				className='mt-4 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6'>
-				<Link href='/contact-sales'>Contact Sales</Link>
-			</Button>
+	<div className='flex gap-x-8 relative lg:col-span-2'>
+		<div className='flex-grow'>
+			<h3 className='font-bold text-white uppercase tracking-wider mb-4'>
+				About Contus Tech
+			</h3>
+			<p className='text-sm leading-relaxed'>
+				CONTUS Tech is a turnkey partner for product development, design, and
+				strategy. As a full-stack software product design & development company,
+				We engineer high-performance tech products developed for rapid market
+				launch.
+			</p>
+			<div>
+				<h4 className='font-bold text-white text-lg'>
+					Want To Build Next-Gen Digital Solutions?
+				</h4>
+				<p className='mt-1'>Let's create something extraordinary together!</p>
+				<Button
+					asChild
+					className='mt-4 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6'>
+					<Link href='/contact-sales'>Contact Sales</Link>
+				</Button>
+			</div>
 		</div>
+		<div className="hidden lg:block w-[2px] bg-slate-300/30 flex-shrink-0"></div>
 	</div>
 )
 
@@ -183,105 +187,123 @@ const F = () => {
 				</div>
 			</div>
 
-			<div className='bg-[#01403D] flex items-center justify-between md:justify-center gap-4 mt-16 py-8 border-t border-gray-700 '>
-				{/* Left Line - visible on desktop */}
-				<div className='block md:hidden w-[200px] h-[3px] bg-gray-500 opacity-50'></div>
-                <div className='flex flex-col md:flex-row items-center gap-4'>
-                    <div className='hidden md:block text-gray-400'>
-                        <p>
-                            © Copyrights {new Date().getFullYear()} by CONTUS TECH.
-                        </p>
-                    </div>
-					<ul className='flex items-center gap-4 order-1 sm:order-2 md:hidden'>
-						<li>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='24'
-								height='24'
-								viewBox='0 0 24 24'
-								fill='none'
-								stroke='currentColor'
-								stroke-width='2'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								className='lucide lucide-instagram-icon lucide-instagram'>
-								<rect width='20' height='20' x='2' y='2' rx='5' ry='5' />
-								<path d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z' />
-								<line x1='17.5' x2='17.51' y1='6.5' y2='6.5' />
-							</svg>
-						</li>
-						<li>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='24'
-								height='24'
-								viewBox='0 0 24 24'
-								fill='none'
-								stroke='currentColor'
-								stroke-width='2'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								className='lucide lucide-facebook-icon lucide-facebook'>
-								<path d='M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z' />
-							</svg>
-						</li>
-						<li>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='24'
-								height='24'
-								viewBox='0 0 24 24'
-								fill='none'
-								stroke='currentColor'
-								stroke-width='2'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								className='lucide lucide-youtube-icon lucide-youtube'>
-								<path d='M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17' />
-								<path d='m10 15 5-3-5-3z' />
-							</svg>
-						</li>
-						<li>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='24'
-								height='24'
-								viewBox='0 0 24 24'
-								fill='none'
-								stroke='currentColor'
-								stroke-width='2'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								className='lucide lucide-x-icon lucide-x'>
-								<path d='M18 6 6 18' />
-								<path d='m6 6 12 12' />
-							</svg>
-						</li>
-						<li>
-							<svg
-								xmlns='http://www.w3.org/2000/svg'
-								width='24'
-								height='24'
-								viewBox='0 0 24 24'
-								fill='none'
-								stroke='currentColor'
-								stroke-width='2'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								className='lucide lucide-linkedin-icon lucide-linkedin'>
-								<path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z' />
-								<rect width='4' height='12' x='2' y='9' />
-								<circle cx='4' cy='4' r='2' />
-							</svg>
-						</li>
-					</ul>
-					<div className='order-3 md:hidden'>
-						<FooterLogo />
+			<div className='bg-[#003b38]'>
+				<div className='container mx-auto'>
+					
+					<section className='flex flex-col gap-4 py-8 lg:hidden'>					
+
+						<div className='flex items-center justify-between gap-4 '>
+							{/* Left Line - visible on desktop px-4 pt-16 pb-8 */}
+							<div className=' w-[200px] h-[3px] bg-gray-500 opacity-50'></div>
+
+							<ul className='flex items-center gap-4'>
+								<li>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='24'
+										height='24'
+										viewBox='0 0 24 24'
+										fill='none'
+										stroke='currentColor'
+										stroke-width='2'
+										stroke-linecap='round'
+										stroke-linejoin='round'
+										className='lucide lucide-instagram-icon lucide-instagram'>
+										<rect width='20' height='20' x='2' y='2' rx='5' ry='5' />
+										<path d='M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z' />
+										<line x1='17.5' x2='17.51' y1='6.5' y2='6.5' />
+									</svg>
+								</li>
+								<li>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='24'
+										height='24'
+										viewBox='0 0 24 24'
+										fill='none'
+										stroke='currentColor'
+										stroke-width='2'
+										stroke-linecap='round'
+										stroke-linejoin='round'
+										className='lucide lucide-facebook-icon lucide-facebook'>
+										<path d='M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z' />
+									</svg>
+								</li>
+								<li>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='24'
+										height='24'
+										viewBox='0 0 24 24'
+										fill='none'
+										stroke='currentColor'
+										stroke-width='2'
+										stroke-linecap='round'
+										stroke-linejoin='round'
+										className='lucide lucide-youtube-icon lucide-youtube'>
+										<path d='M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17' />
+										<path d='m10 15 5-3-5-3z' />
+									</svg>
+								</li>
+								<li>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='24'
+										height='24'
+										viewBox='0 0 24 24'
+										fill='none'
+										stroke='currentColor'
+										stroke-width='2'
+										stroke-linecap='round'
+										stroke-linejoin='round'
+										className='lucide lucide-x-icon lucide-x'>
+										<path d='M18 6 6 18' />
+										<path d='m6 6 12 12' />
+									</svg>
+								</li>
+								<li>
+									<svg
+										xmlns='http://www.w3.org/2000/svg'
+										width='24'
+										height='24'
+										viewBox='0 0 24 24'
+										fill='none'
+										stroke='currentColor'
+										stroke-width='2'
+										stroke-linecap='round'
+										stroke-linejoin='round'
+										className='lucide lucide-linkedin-icon lucide-linkedin'>
+										<path d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z' />
+										<rect width='4' height='12' x='2' y='9' />
+										<circle cx='4' cy='4' r='2' />
+									</svg>
+								</li>
+							</ul>
+
+							{/* Right Line - visible on desktop */}
+							<div className=' w-[200px] h-[3px] bg-gray-500 opacity-50'></div>
+						</div>
+
+						<div className='flex items-center justify-center'>
+							<FooterLogo />
+						</div>
+					</section>
+				</div>
+			</div>
+			{/* bottom footer */}
+			<section className='bg-[#01403D]'>
+				<div className='container mx-auto'>
+					<div className="flex items-center justify-center lg:justify-between py-4 px-4">
+						<p className='text-sm text-gray-400 text-center sm:text-left mb-4 sm:mb-0'>
+							© Copyrights {new Date().getFullYear()} by CONTUS TECH.
+						</p>
+						
+						<div className='hidden lg:flex items-center justify-center'>
+							<FooterLogo />
+						</div>
 					</div>
 				</div>
-				{/* Right Line - visible on desktop */}
-				<div className='block md:hidden w-[200px] h-[3px] bg-gray-500 opacity-50'></div>
-			</div>
+			</section>
 		</footer>
 	)
 }

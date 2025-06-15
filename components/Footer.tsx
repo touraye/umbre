@@ -78,7 +78,7 @@ const FooterLinkColumn = ({
 
 const Footer = () => {
 	return (
-		<footer className='bg-[#01403D] text-gray-300 pb-55 md:pb-0'>
+		<footer className='bg-[#01403D] text-gray-300 pb-45 md:pb-0'>
 			<div className='container mx-auto '>				
 				<section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 py-12 px-6'>
 					<div className='sm:col-span-2 lg:col-span-2 pr-8'>
@@ -116,7 +116,7 @@ const Footer = () => {
                     ))}
 				</section>
 				
-				<section className='bg-[#003b38] mt-16 py-4 px-8 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center'>
+				<section className='bg-[#003b38] mt-16 mb-[90px] border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center'>
 					<p className='text-sm text-gray-400 text-center sm:text-left mb-4 sm:mb-0'>
 						© Copyrights {new Date().getFullYear()} by CONTUS TECH.
 					</p>
@@ -125,7 +125,7 @@ const Footer = () => {
 						alt='Contus Logo'
 						width={80}
 						height={40}
-						className='mb-4 sm:mb-0'
+						className='mb-4'
 					/>
 				</section>
 			</div>

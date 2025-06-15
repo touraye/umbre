@@ -13,8 +13,18 @@ const config: Config = {
         'brand-beige': '#F3E5C8',
         'brand-brown': '#2A1A14',
       },
+      animation: {
+        'pulse-horizontal': 'pulse-horizontal 2s ease-in-out infinite',
+      },
+      keyframes: {
+        'pulse-horizontal': {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(8px)' }
+        }
+
+      },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [ require('tailwindcss-animate') ],
 }
 export default config
